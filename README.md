@@ -38,7 +38,7 @@ Searches Supabase db for beanie babies by astrology sign.
 
 -   window.addEventListener​('load', async () => {})
 -   async function findBeanies(astroSign) {}
--   searchForm.addEvenListener('submit', (e) => {})
+-   searchForm.addEventListener('submit', (e) => {})
 
 ## Functions (to plan out how you'll segment things)
 

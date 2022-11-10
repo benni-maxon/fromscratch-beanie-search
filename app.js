@@ -17,6 +17,7 @@ window.addEventListener('load', async () => {
     findBeanies();
     const response = await getAstroSigns();
     astroSigns = response.data;
+    displayAstroOptions();
 });
 
 async function findBeanies(astroSign) {
@@ -24,6 +25,13 @@ async function findBeanies(astroSign) {
     beanies = response.data;
     displayBeanies();
 }
+
+searchForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(searchForm);
+    findBeanies(formData.get('astroSign'));
+});
 
 /* Display Functions */
 

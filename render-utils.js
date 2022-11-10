@@ -23,4 +23,16 @@ export function renderBeanie(beanie) {
 
     const astroSign = document.createElement('span');
     astroSign.textContent = beanie.astroSign;
+
+    attributes.append(animal, subtheme, astroSign);
+
+    const released = document.createElement('p');
+    released.classList.add('released');
+    released.textContent = `released ${beanie.releaseYear}`;
+
+    content.append(h2, attributes, released);
+
+    li.append(img, content);
+
+    return li;
 }

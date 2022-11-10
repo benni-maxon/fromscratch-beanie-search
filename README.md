@@ -9,75 +9,57 @@ Searches Supabase db for beanie babies by astrology sign.
 ## Make a plan of attack
 
 1. Write HTML elements, label with IDs
-2.
-3.
-4.
-5. Make page layout with CSS
+2. Create and export/import fetch-utils.js
+3. display list from fetched data
+4. Populate dropdown options from fetched data
+5. Apply search criteria
+6. Make page layout with CSS
    ​
 
 ## HTML elements (stuff present upon page load)
 
-​
+-   img
+-   h1
 
--   doesn't need to be absolutely every html element on the page
-    -   can just be stuff on page that user will have to interact with and you'll have to grab in `app.js`
-        ​
-        _example:_
-        ​
--   Form containing user text input and submit button
--   Flexbox div that will contain displayed list of dogs
-    ​
+-   section
+-   h2
+-   form
+-   label
+-   select
+-   option
+-   button
 
 ## State (everything you need to track internally using JS variables)
 
-​
-
--   counters, user data that's been entered, stuff fetched from external databases, etc
--   generally, any JS variables that exist in the global scope in `app.js` go here
-    ​
-    _example:_
-    ​
--   `employeeList` - array containing all employee objects
-    ​
+-   let beanies = []
+-   let astroSigns = []
 
 ## Events (anything that happens via JS when the user interacts with your site)
 
-​
-
--   list both triggering event and its resulting effects
-    ​
-    _example:_
-    ​
--   Submit button clicked:
-    -   Pull data from input form
-    -   Run data through `processData(data)`
-    -   Put processed data in array `processedData`
-    -   Render and display processed data on page
-        ​
+-   window.addEventListener​('load', async () => {})
+-   async function findBeanies(astroSign) {}
+-   searchForm.addEvenListener('submit', (e) => {})
 
 ## Functions (to plan out how you'll segment things)
 
 ​
 
--   it's not necessary to specify all args! when starting out, you're just trying to figure out how you're going to segment your work
--   but! make sure to put your render and display functions here!! that's part of segementing out your program logic!! - that also keeps your event listeners clean because it'll be mostly function calls
-    ​
-    _example:_
-    ​
--   `calculateTripTime(distance)` - calculates trip time based on total trip distance
-    ​
-
 ### Render Functions
 
-​
+-   render-utils
+    -   export function renderBeanie(beanie) {}
+    -   export function renderAstroSign(astroSign) {}
 
 ### Display functions
 
-​
+-   function displayBeanies() {}
+-   function displayAstroOptions() {}
 
 ### Fetch Functions (if applicable)
 
-​
+-   in fetch-utils.js
+    -   export async function getBeanies(astroSign) {}
+    -   export async function getAstroSigns() {}
 
 ### Other Functions
 
@@ -85,13 +67,8 @@ Searches Supabase db for beanie babies by astrology sign.
 
 ## Slices
 
-​
-_list of JS functions and features that need to be written in order, usually because each one depends on the previous ones being usable_
-​
-**example:**
-​
-
-1. write createObject()
-2. write renderObject(), which depends on object existing
-3. write displayObject(), which depends on `renderObject()`
-4. write processObject(), which depends on object existing
+1. Populate HTML
+2. fetch-utils.js with supabase data (import supabase key and url)
+3. render-utils.js from supabase objects
+4. app.js to grab DOM elements
+5. styling

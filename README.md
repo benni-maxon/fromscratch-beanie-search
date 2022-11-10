@@ -8,17 +8,11 @@ Searches Supabase db for beanie babies by astrology sign.
 
 ## Make a plan of attack
 
-​
-
--   list things out in plain English/pseudocode; no need to specify ids, for example
-    ​
-    _example:_
-    ​
-
 1. Write HTML elements, label with IDs
-2. Make page layout with CSS
-3. Grab HTML elements with `getElementById()`, store in JS variables
-4. etc...
+2.
+3.
+4.
+5. Make page layout with CSS
    ​
 
 ## HTML elements (stuff present upon page load)

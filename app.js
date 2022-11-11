@@ -21,7 +21,7 @@ window.addEventListener('load', async () => {
 });
 
 async function findBeanies(astroSign) {
-    const response = await getAstroSigns();
+    const response = await getBeanies(astroSign);
     beanies = response.data;
     displayBeanies();
 }

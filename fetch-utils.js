@@ -12,7 +12,9 @@ export async function getBeanies(astroSign) {
     if (astroSign) {
         query = query.eq('astroSign', astroSign);
     }
+    // console.log(query);
     const response = await query;
+    // console.log(response);
     return response;
 }
 
